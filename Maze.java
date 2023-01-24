@@ -51,11 +51,7 @@ public class Maze {
                     if (maze[i][j] == "#") {                
                         logMaze.write("###");
                     } else {
-                        if (maze[i][j].length() < 2) {
-                            logMaze.write(" " + maze[i][j] + " ");
-                        } else {
-                        logMaze.write(" " + maze[i][j]);
-                        } 
+                        logMaze.write(String.format("%3s", maze[i][j]));
                     }
                     if (j == maze.length-1) {
                         logMaze.write("\n");
